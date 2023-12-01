@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+body {
+  background-image: url('https://w.wallhaven.cc/full/4v/wallhaven-4vmwqm.jpg');
+  background-repeat: no-repeat;
+}

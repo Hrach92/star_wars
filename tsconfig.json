@@ -23,7 +23,8 @@
     "types": ["node", "jest", "webpack-env"],
     "typeRoots": ["./types"],
     "baseUrl": "src",
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
-  "include": ["src"]
+  "include": ["src/**/*"]
 }

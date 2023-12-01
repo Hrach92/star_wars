@@ -1,0 +1,6 @@
+.pages{
+    position: absolute;
+    bottom: 25px;
+    width: fit-content;
+    margin-left:calc((100% - 272px)/2);
+}
