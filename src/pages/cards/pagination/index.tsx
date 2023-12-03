@@ -1,6 +1,5 @@
 import React from "react";
-import { Pagination } from "antd";
-import styles from "./styles.module.css";
+import { Pagination } from "./style";
 
 type PageTypes = {
   setPage?: (e: number) => void;
@@ -14,7 +13,6 @@ const Pages: React.FC<PageTypes> = ({ setPage = () => {} }) => {
       onChange={(e) => {
         setPage(e);
       }}
-      className={styles.pages}
     />
   );
 };

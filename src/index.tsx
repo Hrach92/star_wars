@@ -6,6 +6,7 @@ import App from "./App";
 import { store } from "./store";
 import { BrowserRouter } from "react-router-dom";
 import { setupListeners } from "@reduxjs/toolkit/query";
+import SearchProvider from "providers/searchProvider";
 
 setupListeners(store.dispatch);
 
@@ -14,7 +15,9 @@ const root = ReactDOM.createRoot(container!);
 root.render(
   <Provider store={store}>
     <BrowserRouter>
-      <App />
+      <SearchProvider>
+        <App />
+      </SearchProvider>
     </BrowserRouter>
   </Provider>
 );

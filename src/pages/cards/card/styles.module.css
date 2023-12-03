@@ -1,0 +1,12 @@
+.container{
+    width: 150px;
+    height: 250px;
+    border-radius:10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.19);
+    background-repeat: repeat;
+    background-size: cover;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-family: "Gill Sans Extrabold", sans-serif;
+}

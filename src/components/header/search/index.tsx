@@ -1,13 +1,19 @@
 import { Input } from "antd";
+import { useCallback } from "react";
 
 const { Search } = Input;
 
-const onSearch = (e: any) => console.log(e);
+const SearchComponent = ({ setText }: { setText: (text: string) => void }) => {
+  const onSearch = useCallback(
+    (e: any) => {
+      setText(e);
+    },
+    [setText]
+  );
 
-const SearchComponent = () => {
   return (
     <Search
-      placeholder="input search text"
+      placeholder="Search ..."
       onSearch={onSearch}
       style={{ width: 200 }}
     />

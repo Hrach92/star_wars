@@ -1,6 +1,12 @@
 .pages{
-    position: absolute;
-    bottom: 25px;
     width: fit-content;
-    margin-left:calc((100% - 272px)/2);
+    padding:15px 0 25px
+}
+.pages li {
+    background: grey !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7) !important;
+}
+.pages .ant-pagination .ant-pagination-item-active {
+    border: none !important;
+    color: white !important;
 }
