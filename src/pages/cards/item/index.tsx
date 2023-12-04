@@ -25,14 +25,22 @@ const Item = (): React.JSX.Element => {
 
   const setFilmNames = useCallback(() => {
     films?.forEach(async (url: string) => {
-      const res = await axios.get(url);
-      setFilm((prev) => [...prev, res?.data?.title]);
+      try {
+        const res = await axios.get(url);
+        setFilm((prev) => [...prev, res?.data?.title]);
+      } catch (err: any) {
+        console.log(err.message);
+      }
     });
   }, [films]);
 
   const setPlanetsNames = useCallback(async () => {
-    const res = await axios.get(homeworld);
-    setPlanet(res?.data?.name);
+    try {
+      const res = await axios.get(homeworld);
+      setPlanet(res?.data?.name);
+    } catch (err: any) {
+      console.log(err.message);
+    }
   }, [homeworld]);
 
   useEffect(() => {
